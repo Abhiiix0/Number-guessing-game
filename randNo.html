@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            margin-top: 300px;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        input{
+            height: 30px;
+            width: 200px;
+        }
+        button{
+            height: 35px;
+            background-color: aquamarine;
+            font-weight: bold;
+        }
+        label{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="num">ENTER A NUMBER BETWEEN 1 to 10</label><br><br>
+        <input type="number" id="num" >
+        <button onclick= Ans(); >Submit</button>
+    
+    </div>
+     <script>
+             var rand = Math.random() * (10-1) + 1;
+             var rand1 = parseInt(rand);
+             
+             var round = 1;
+              
+            function Ans() {
+            var num = document.getElementById('num').value;
+            if (rand1 == num ) {
+                alert("CONGRATULATION!!! YOU GUESSED IT RIGHT IN " + round);
+
+            }
+
+            else  if(rand1 < num) {
+                alert("Oops sorry!! TRY A SMALLER NO")
+                round ++;
+            }
+            
+            else  if(rand1 > num) {
+                alert("Oops sorry!! TRY A BIGGER NO")
+                round++;
+            }
+        }
+     </script>
+
+</body>
+</html>
