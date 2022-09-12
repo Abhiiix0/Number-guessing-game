@@ -29,10 +29,14 @@
         label{
             font-family: Arial, Helvetica, sans-serif;
         }
+        h1{
+            font-size: 27px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <h1>GUESS THE NUMBER</h1>
         <label for="num">ENTER A NUMBER BETWEEN 1 to 10</label><br><br>
         <input type="number" id="num" >
         <button onclick= Ans(); >Submit</button>
@@ -47,7 +51,8 @@
             function Ans() {
             var num = document.getElementById('num').value;
             if (rand1 == num ) {
-                alert("CONGRATULATION!!! YOU GUESSED IT RIGHT IN " + round + "guess");
+                alert("CONGRATULATION!!! YOU GUESSED IT RIGHT IN " + round + " GUESS");
+                location.reload();
 
             }
 
